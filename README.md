@@ -22,4 +22,8 @@ x = Lx*(0:Nx-1)/Nx
 u = cos.(x) + 0.1*cos.(x/16).*(2*sin.(x/16).+1)
 
 U,x,t = ksintegrateNaive(u, Lx, dt, Nt, nplot);
+
+# Or
+
+U,x,t = ksintegrateTuned(u, Lx, dt, Nt);
 ```
